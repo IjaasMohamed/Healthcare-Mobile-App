@@ -12,9 +12,9 @@ import com.google.firebase.database.FirebaseDatabase
 
 class InsertionActivity : ComponentActivity() {
 
-    private lateinit var etEmpName : EditText
-    private lateinit var etEmpAge : EditText
-    private lateinit var etDoctorName : EditText
+    lateinit var etEmpName : EditText
+    lateinit var etEmpAge : EditText
+    lateinit var etDoctorName : EditText
     private lateinit var btnSaveData : Button
 
     private lateinit var dbRef : DatabaseReference
@@ -35,7 +35,7 @@ class InsertionActivity : ComponentActivity() {
         }
     }
 
-    private fun saveEmployeeData(){
+    fun saveEmployeeData(){
         val empName = etEmpName.text.toString()
         val empAge = etEmpAge.text.toString()
         val docName = etDoctorName.text.toString()
