@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/etEmpName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="text"
+        android:paddingTop="150dp"
+        android:hint="Patient Name"
+        />
+
+    <EditText
+        android:id="@+id/etEmpAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Patient Age"
+        android:inputType="text"
+        android:paddingTop="80dp" />
+
+    <EditText
+        android:id="@+id/etDoctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="text"
+        android:paddingTop="80dp"
+        android:hint="Doctor Name"
+        />
+
+    <Button
+        android:id="@+id/btnSaveData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#8BC34A"
+        android:paddingLeft="25dp"
+        android:paddingTop="5dp"
+        android:paddingRight="25dp"
+        android:paddingBottom="5dp"
+        android:text="Save Data"
+        android:textColor="#FFFFFF"
+        android:textSize="22dp" />
+
+</LinearLayout>
