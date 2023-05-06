@@ -19,6 +19,8 @@ import java.util.*
 class editDatas : AppCompatActivity() {
     private lateinit var binding: ActivityEditDatasBinding
     private lateinit var database: DatabaseReference
+    lateinit var databaseReference: DatabaseReference
+    lateinit var firebaseDatabase: FirebaseDatabase
 
 
 
@@ -60,30 +62,83 @@ class editDatas : AppCompatActivity() {
         setValuesToViews()
 
         binding.updateBtn.setOnClickListener {
-
+            val empID = intent.getStringExtra("id")
             val name = binding.nameTxt.text.toString()
             val number = binding.numberTxt.text.toString()
             val special = binding.specialTxt.text.toString()
             val date = binding.dateTxt.text.toString()
 
 
+//            databaseReference  = firebaseDatabase.getReference("Doctors").child("NUkRFYdAOMo3D0Yl4PX")
+//            var hashMap : HashMap<String, String>
+//                    = HashMap<String, String> ()
+//            hashMap.put("special",name);
+//            hashMap.put("number",number);
+//            hashMap.put("special",special);
+//            hashMap.put("date",date);
+//
+//            databaseReference.updateChildren(hashMap as Map<String, Any>);
+//            Toast.makeText(this, "Updated Succesfully", Toast.LENGTH_SHORT).show()
+
             if (empID != null) {
-                val filename = UUID.randomUUID().toString()
-                val ref = FirebaseStorage.getInstance().getReference("/image/$filename")
-                ref.putFile(selectedImageUri!!)
-                    .addOnSuccessListener { taskSnapshot ->
-                        Toast.makeText(this, "Photo saved", Toast.LENGTH_SHORT).show()
-                        taskSnapshot.metadata!!.reference!!.downloadUrl
-                            .addOnSuccessListener { uri ->
-                                val image = uri.toString()
-                                updateData(empID, name, special, number, date, image)
-                                Toast.makeText(this, "Successfuly Updated", Toast.LENGTH_SHORT).show()
-                            }
-                    }}
+
+                if(selectedImageUri ==null){
+                    database = FirebaseDatabase.getInstance().getReference("Doctors")
+                    val user = mapOf<String, String>(
+                        "id" to empID,
+                        "name" to name,
+                        "number" to number,
+                        "special" to special,
+                        "date" to date,
+                    )
+                    database.child(empID).updateChildren(user).addOnSuccessListener {
+                        binding.nameTxt.text.clear()
+                        binding.specialTxt.text.clear()
+                        binding.numberTxt.text.clear()
+                        binding.dateTxt.text.clear()
+                    }.addOnFailureListener {
+
+                        Toast.makeText(this, "Failed to Update", Toast.LENGTH_SHORT).show()
+
+                    }
+                }
+
+                else {
+
+                    val filename = UUID.randomUUID().toString()
+                    val ref = FirebaseStorage.getInstance().getReference("/image/$filename")
+
+                    ref.putFile(selectedImageUri!!)
+                        .addOnSuccessListener { taskSnapshot ->
+                            Toast.makeText(this, "Photo saved", Toast.LENGTH_SHORT).show()
+                            taskSnapshot.metadata!!.reference!!.downloadUrl
+                                .addOnSuccessListener { uri ->
+                                    val image = uri.toString()
+
+
+                                    updateData(empID, name, special, number, date, image)
+                                    Toast.makeText(this, "Successfuly Updated", Toast.LENGTH_SHORT).show()
+
+
+
+                                }
+                        }
+
+
+                }
+
+
+
+
+
+
+
+
+            }
+
+
         }
         binding.deleteBtn.setOnClickListener {
-
-
             database = FirebaseDatabase.getInstance().getReference("Doctors")
             database.child(empID!!).get().addOnSuccessListener {
 

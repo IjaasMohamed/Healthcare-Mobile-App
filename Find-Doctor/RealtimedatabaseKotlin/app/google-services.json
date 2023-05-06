@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "1004567912872",
-    "project_id": "realtimedatabasekotlin-f8c4c",
-    "storage_bucket": "realtimedatabasekotlin-f8c4c.appspot.com"
+    "project_number": "796539946676",
+    "firebase_url": "https://medizone-d58c8-default-rtdb.firebaseio.com",
+    "project_id": "medizone-d58c8",
+    "storage_bucket": "medizone-d58c8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1004567912872:android:3c7178f7b4fe6df962bd9d",
+        "mobilesdk_app_id": "1:796539946676:android:32402ed6463f23f0ac79e1",
         "android_client_info": {
           "package_name": "com.example.realtimedatabasekotlin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1004567912872-k34ufv071cbk55buu1vm9reqg34t1ona.apps.googleusercontent.com",
+          "client_id": "796539946676-fst7f42g931d1t11rdikb9sd3ak6rug2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAOGPO6P--ScWCYA3ByMygFLhVfKZcLeOY"
+          "current_key": "AIzaSyCiJLDdd5d5-NpgJiMRpxBYHtK9oqmYo6k"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1004567912872-k34ufv071cbk55buu1vm9reqg34t1ona.apps.googleusercontent.com",
+              "client_id": "796539946676-fst7f42g931d1t11rdikb9sd3ak6rug2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
