@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="8dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/whatsapp_image_2023_05_10_at_11_45_54"
+    app:cardBackgroundColor="#B6AA40"
     app:cardCornerRadius="8dp"
-    android:layout_margin="8dp">
+    app:cardElevation="8dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="16dp"
         android:layout_gravity="center"
-        android:orientation="vertical">
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -25,12 +27,12 @@
                 android:id="@+id/tvEmpName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Emp Name"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/black"
+                android:text="Emp Name"
+                android:textColor="@color/white"
                 android:textSize="30sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
 
         </LinearLayout>
