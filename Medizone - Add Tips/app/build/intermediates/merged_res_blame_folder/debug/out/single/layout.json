@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.example.udemyclone.app-mergeDebugResources-30:/layout/activity_add_tips.xml",
+        "source": "com.example.udemyclone.app-main-33:/layout/activity_add_tips.xml"
+    },
+    {
+        "merged": "com.example.udemyclone.app-mergeDebugResources-30:/layout/rv_course_item.xml",
+        "source": "com.example.udemyclone.app-main-33:/layout/rv_course_item.xml"
+    },
+    {
+        "merged": "com.example.udemyclone.app-mergeDebugResources-30:/layout/activity_tips_details.xml",
+        "source": "com.example.udemyclone.app-main-33:/layout/activity_tips_details.xml"
+    },
+    {
+        "merged": "com.example.udemyclone.app-mergeDebugResources-30:/layout/activity_edit_tips.xml",
+        "source": "com.example.udemyclone.app-main-33:/layout/activity_edit_tips.xml"
+    },
+    {
+        "merged": "com.example.udemyclone.app-mergeDebugResources-30:/layout/activity_user_tips_details.xml",
+        "source": "com.example.udemyclone.app-main-33:/layout/activity_user_tips_details.xml"
+    },
+    {
+        "merged": "com.example.udemyclone.app-mergeDebugResources-30:/layout/activity_user_view_tips.xml",
+        "source": "com.example.udemyclone.app-main-33:/layout/activity_user_view_tips.xml"
+    },
+    {
+        "merged": "com.example.udemyclone.app-mergeDebugResources-30:/layout/activity_main.xml",
+        "source": "com.example.udemyclone.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.udemyclone.app-mergeDebugResources-30:/layout/activity_login.xml",
+        "source": "com.example.udemyclone.app-main-33:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.udemyclone.app-mergeDebugResources-30:/layout/activity_registration.xml",
+        "source": "com.example.udemyclone.app-main-33:/layout/activity_registration.xml"
+    }
+]

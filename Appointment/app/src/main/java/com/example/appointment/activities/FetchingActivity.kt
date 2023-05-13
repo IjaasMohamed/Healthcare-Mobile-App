@@ -85,8 +85,6 @@ class FetchingActivity : ComponentActivity() {
                         }
 
                     })
-
-
                     empRecyclerView.visibility = View.VISIBLE
                     tvLoadingData.visibility = View.GONE
                 }
